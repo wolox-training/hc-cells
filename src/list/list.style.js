@@ -16,7 +16,6 @@ export default css`
     height: 100vh;
     background: #D4AF37;
     text-align-last: center;
-    //content: url(file:///Users/hayler.jair.caicedo/pngegg.png);
   }
 
   

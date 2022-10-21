@@ -10,7 +10,7 @@ class DetailComp extends LitElement {
 
   static get properties() {
     return {
-      cover: { book_title: Object }
+      cover: { type: Object }
     }
   }
 
@@ -19,7 +19,6 @@ class DetailComp extends LitElement {
     this.cover = {
       sprites: {},
       author: "",
-      book_title: []
     };
   }
 
@@ -61,7 +60,6 @@ class DetailComp extends LitElement {
           </div>
         </div>
       </body>
-      
     `;
   }
 }
