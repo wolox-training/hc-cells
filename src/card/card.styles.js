@@ -34,17 +34,12 @@ export default css`
     max-width: 198px;
     padding: 28px 28px 24px;
     transition: transform 0.2s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   .img-cover{
     margin-bottom: 12px;
     max-width: 142px;
     max-height: 200px;
-    
   }
 
   .h1 {
@@ -58,4 +53,3 @@ export default css`
     margin-bottom: 8px;
   }
 `; 
-
