@@ -1,8 +1,6 @@
 import { LitElement, html } from 'lit-element';
 import styles from './list.style.js';
 
-
-
 class ListComp extends LitElement {
 
   static get styles(){
@@ -20,7 +18,7 @@ class ListComp extends LitElement {
     super();
     this.covers = [];
     this.result = [];
-    this.dataFromBuscador();
+    this.dataFromSearcher();
   }
 
   onClick(cover) {
@@ -30,14 +28,14 @@ class ListComp extends LitElement {
     this.dispatchEvent(event);
   }
   processData(data) {
-    if (data.lenght == 0) {
+    if (data.lenght = false) {
       this.result= this.covers; 
     } else {
       this.result=data;
     }
   }
 
-  dataFromBuscador(){
+  dataFromSearcher(){
 
     this.addEventListener('datasave', (e)=> this.processData (e.detail.data));
 
@@ -47,7 +45,7 @@ class ListComp extends LitElement {
     console.log(this.covers);
     return html`
       <div class="lupita">
-        <buscador-comp .data=${this.covers}></buscador-comp>
+        <searcher-comp .data=${this.covers}></searcher-comp>
         <div class="container">
           ${this.result.map(
             (pok) => html`

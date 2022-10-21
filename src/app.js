@@ -3,8 +3,7 @@ import books from "./books.json" assert { type: "json" };
 import './card/card.js';
 import './detail/detail.js';
 import './list/list.js';
-import './buscador.js';
-
+import './searcher.js';
 
 class AppComp extends LitElement {
 
