@@ -43,12 +43,7 @@ export class SearcherComp extends LitElement {
 
   filterData(input) {
     console.log(input, this.result);
-    this.result = [];
-    this.data.filter((product) => {
-      const name = product.book_title.toLowerCase();
-
-      if (name.indexOf(input) !== -1) this.result = [...this.result, product];
-    });
+    this.result = this.data.filter(product => product.book_title.toLowerCase().indexOf(input) !== -1);
 
     if (this.result.length < 1)
       this.result = [
