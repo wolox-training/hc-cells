@@ -1,30 +1,26 @@
 import {CellsPage} from '@cells/cells-page';
 import { html,css } from 'lit-element';
-import '../../elements/login/login';
+import '../../elements/card/card';
 
-class LoginPage extends CellsPage{
+class CardPage extends CellsPage{
     static get is() {
-        return 'login-page';
+        return 'card-page';
     }
 
     static get properties() {
       return {
-         
       };
     }
   
     constructor() {
       super();
     }
-  
-    goGenesis(){
-      this.navigate('genesis'); 
-      } 
-     
+
   render() {
-    return html` <cells-template-paper-drawer-panel mode="seamed">
+    return html` 
+    <cells-template-paper-drawer-panel mode="seamed">
       <div slot="app__main" class="container">
-      <login-comp></login-comp>
+      <detail-comp></detail-comp>
       </div>
     </cells-template-paper-drawer-panel>`;
   }
@@ -34,5 +30,5 @@ class LoginPage extends CellsPage{
   }
 }
  
- window.customElements.define(LoginPage.is, LoginPage);
+ window.customElements.define(CardPage.is, CardPage);
  
